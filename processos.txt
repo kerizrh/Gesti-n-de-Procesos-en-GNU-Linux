@@ -1,0 +1,1 @@
+kerizrh    61404  0.0  0.0   6460  2176 pts/0    S+   04:47   0:00 grep --color=auto bash
