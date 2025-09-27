@@ -8,7 +8,7 @@ Esta guía práctica contiene ejercicios para comprender la gestión de procesos
 - Familiarizarse con comandos y herramientas de Linux
 - Comprender el comportamiento de procesos e hilos
 
-## 📁 Estructura de Archivos
+##  Estructura de Archivos
 
 ### Códigos Fuente:
 - `zombie.c` - Procesos huérfanos y zombies
@@ -19,7 +19,7 @@ Esta guía práctica contiene ejercicios para comprender la gestión de procesos
 ### Archivos de Salida:
 - `processos.txt` - Resultado del pipeline (Ejercicio 3)
 
-## 🛠️ Ejercicios
+##  Ejercicios
 
 ### Ejercicio 1: Procesos Huérfanos y Zombies
 **Objetivo:** Observar los estados de procesos zombie y huérfanos
@@ -53,29 +53,29 @@ Esta guía práctica contiene ejercicios para comprender la gestión de procesos
 gcc -o zombie zombie.c
 ```
 
-# Comandos Útiles para Monitoreo
+## Comandos Útiles para Monitoreo
 
 
-# Ver procesos en árbol
+### Ver procesos en árbol
 ```  
 ps -o pid,ppid,stat,cmd --forest
 ```  
-# Buscar procesos específicos
+### Buscar procesos específicos
 ```  
 ps aux | grep [nombre_proceso]
 ```  
-# Ver estados de procesos
+### Ver estados de procesos
 ```  
 ps aux | grep -E "(zombie|defunct)"
 ```  
-# Monitoreo en tiempo real
+### Monitoreo en tiempo real
 ```  
 top
 htop
 ```  
-# Conceptos Clave Aprendidos
-Estados de Procesos:
+## Conceptos Clave Aprendidos  
 
+### Estados de Procesos:
    +Running (R): En ejecución
 
    +Sleeping (S): Esperando evento
@@ -83,8 +83,8 @@ Estados de Procesos:
    +Zombie (Z): Terminado pero no recolectado
 
    +Orphan: Proceso cuyo padre ha terminado
-
-# Comunicación entre Procesos:
+  
+### Comunicación entre Procesos:
 
     +Pipes: Comunicación unidireccional en memoria
 
@@ -92,7 +92,7 @@ Estados de Procesos:
 
     +Eficiencia: Pipelines vs archivos en disco
 
-# Concurrencia:
+### Concurrencia:
 
     +Procesos: Espacios de memoria independientes
 
@@ -100,7 +100,7 @@ Estados de Procesos:
 
     +Sincronización: wait(), pthread_join()
 
-# Requisitos del Entorno
+### Requisitos del Entorno
 
     +Sistema GNU/Linux
 
