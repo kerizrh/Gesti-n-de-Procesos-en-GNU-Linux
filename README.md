@@ -1,9 +1,9 @@
 # Guía Práctica 2: Gestión de Procesos en GNU/Linux
 
-## 📋 Descripción
+##  Descripción
 Esta guía práctica contiene ejercicios para comprender la gestión de procesos en sistemas GNU/Linux, incluyendo creación de procesos, estados (zombie/huérfano), comunicación entre procesos y uso de hilos.
 
-## 🎯 Objetivos
+##  Objetivos
 - Reforzar conceptos teóricos de gestión de procesos
 - Familiarizarse con comandos y herramientas de Linux
 - Comprender el comportamiento de procesos e hilos
@@ -11,10 +11,10 @@ Esta guía práctica contiene ejercicios para comprender la gestión de procesos
 ## 📁 Estructura de Archivos
 
 ### Códigos Fuente:
-- `ejercicio1.c` - Procesos huérfanos y zombies
+- `zombie.c` - Procesos huérfanos y zombies
 - `ejercicio2.sh` - Creación masiva de procesos
-- `ejercicio4.c` - Creación de procesos con fork()
-- `ejercicio5.c` - Creación de hilos con pthreads
+- `fork.c` - Creación de procesos con fork()
+- `pthread.c` - Creación de hilos con pthreads
 
 ### Archivos de Salida:
 - `processos.txt` - Resultado del pipeline (Ejercicio 3)
@@ -51,58 +51,63 @@ Esta guía práctica contiene ejercicios para comprender la gestión de procesos
 ### Compilar programas en C:
 ```bash
 gcc -o zombie zombie.c
+```
 
 # Comandos Útiles para Monitoreo
-bash
+
 
 # Ver procesos en árbol
+```  
 ps -o pid,ppid,stat,cmd --forest
-
+```  
 # Buscar procesos específicos
+```  
 ps aux | grep [nombre_proceso]
-
+```  
 # Ver estados de procesos
+```  
 ps aux | grep -E "(zombie|defunct)"
-
+```  
 # Monitoreo en tiempo real
+```  
 top
 htop
-
+```  
 # Conceptos Clave Aprendidos
 Estados de Procesos:
 
-    Running (R): En ejecución
+   +Running (R): En ejecución
 
-    Sleeping (S): Esperando evento
+   +Sleeping (S): Esperando evento
 
-    Zombie (Z): Terminado pero no recolectado
+   +Zombie (Z): Terminado pero no recolectado
 
-    Orphan: Proceso cuyo padre ha terminado
+   +Orphan: Proceso cuyo padre ha terminado
 
 # Comunicación entre Procesos:
 
-    Pipes: Comunicación unidireccional en memoria
+    +Pipes: Comunicación unidireccional en memoria
 
-    Redirecciones: Conexión entrada/salida
+    +Redirecciones: Conexión entrada/salida
 
-    Eficiencia: Pipelines vs archivos en disco
+    +Eficiencia: Pipelines vs archivos en disco
 
 # Concurrencia:
 
-    Procesos: Espacios de memoria independientes
+    +Procesos: Espacios de memoria independientes
 
-    Hilos: Comparten memoria dentro del proceso
+    +Hilos: Comparten memoria dentro del proceso
 
-    Sincronización: wait(), pthread_join()
+    +Sincronización: wait(), pthread_join()
 
 # Requisitos del Entorno
 
-    Sistema GNU/Linux
+    +Sistema GNU/Linux
 
-    Compilador gcc
+    +Compilador gcc
 
-    Bibliotecas: pthreads
+    +Bibliotecas: pthreads
 
-    Terminal bash
+    +Terminal bash
 
 Autor: Kevin Rivera
